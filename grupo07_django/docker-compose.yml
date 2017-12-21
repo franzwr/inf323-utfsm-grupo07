@@ -7,6 +7,8 @@ services:
       POSTGRES_DB: django_db
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: grupo07
+    ports:
+      - "5432:5432"
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
